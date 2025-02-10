@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Menu</title>
+    <style>
+        body {
+            background: url('https://png.pngtree.com/thumb_back/fw800/background/20231029/pngtree-ultra-high-resolution-texture-premium-quality-black-background-texture-image_13702929.png') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: white;
+            text-align: center;
+            position: relative; 
+        }
+
+        .container {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .menu-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .menu-btn {
+            text-decoration: none;
+            background: orange;
+            color: black;
+            padding: 10px 20px;
+            font-size: 18px;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .menu-btn:hover {
+            background: darkorange;
+        }
+
+        /* Back to Menu Button */
+        .back-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: orange;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            text-decoration: none;
+            color: black;
+            transition: 0.3s;
+        }
+
+        .back-button:hover {
+            background: darkorange;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Please Choose One of These Categories</h1>
+        <div class="menu-buttons">
+            <a href="juice.html" class="menu-btn">Juice</a>
+            <a href="cake.html" class="menu-btn">Cake</a>
+            <a href="sandwiches.html" class="menu-btn">Sandwiches</a>
+            <a href="pizza.html" class="menu-btn">Pizza</a>
+            <a href="meal.html" class="menu-btn">Meal</a>
+        </div>
+    </div>
+
+    <a href="project.html" class="back-button">Back to Home Page</a>
+</body>
+</html>
+
+
+
+
+
+
+

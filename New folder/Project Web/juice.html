@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juice Menu</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400..900&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-image: url('https://www.baltana.com/files/wallpapers-16/Dark-Black-Background-HD-Wallpaper-40749.jpg');
+            background-size: cover;
+            background-position: center;
+            font-family: 'Roboto Slab', serif;
+            color: white;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; 
+            overflow: hidden; 
+            position: relative;
+        }
+        .menu {
+            width: 45%;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.6);
+            border-radius: 10px;
+            text-align: right;
+        }
+        h1 {
+            margin-bottom: 20px;
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
+            font-weight: 700;
+            color: #ffcc00;
+        }
+        .juice-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px;
+            font-size: 18px;
+            color: black;
+            background: white;
+            border-radius: 5px;
+            margin: 4px 0;
+        }
+        .juice-name, .juice-prices {
+            flex: 1;
+            text-align: right;
+        }
+        .back-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #ffcc00;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+        
+        .image-container {
+            position: absolute;
+            top: 15%;
+            width: 180px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .left-images {
+            left: 3%;
+        }
+        .right-images {
+            right: 3%;
+        }
+        .image-container img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="image-container left-images">
+        <img src="https://www.simplyleb.com/wp-content/uploads/Lebanese-Fruit-Cocktail-20-scaled.jpg" alt="Fruit Cocktail">
+        <img src="https://images.immediate.co.uk/production/volatile/sites/30/2022/06/Tequila-sunrise-fb8b3ab.jpg?quality=90&resize=556,505" alt="Tequila Sunrise">
+    </div>
+
+    <div class="menu">
+        <h1>Juice Menu</h1>
+        <div class="juice-item"><span class="juice-name">Orange</span><span class="juice-prices">Small: $4 | Medium: $5 | Large: $6</span></div>
+        <div class="juice-item"><span class="juice-name">Apple</span><span class="juice-prices">Small: $4 | Medium: $5 | Large: $6</span></div>
+        <div class="juice-item"><span class="juice-name">Carrot</span><span class="juice-prices">Small: $4 | Medium: $5 | Large: $6</span></div>
+        <div class="juice-item"><span class="juice-name">Grape</span><span class="juice-prices">Small: $4 | Medium: $5 | Large: $6</span></div>
+        <div class="juice-item"><span class="juice-name">Lemonade</span><span class="juice-prices">Small: $4 | Medium: $5 | Large: $6</span></div>
+        <div class="juice-item"><span class="juice-name">Grapefruit</span><span class="juice-prices">Small: $4 | Medium: $5 | Large: $6</span></div>
+        <div class="juice-item"><span class="juice-name">Strawberry</span><span class="juice-prices">Small: $4 | Medium: $5 | Large: $6</span></div>
+        <div class="juice-item"><span class="juice-name">Fresh Mango</span><span class="juice-prices">Small: $4 | Medium: $5 | Large: $6</span></div>
+        <div class="juice-item"><span class="juice-name">Jallab</span><span class="juice-prices">Small: $4 | Medium: $5 | Large: $6</span></div>
+        <div class="juice-item"><span class="juice-name">Kiwi</span><span class="juice-prices">Small: $4 | Medium: $5 | Large: $6</span></div>
+        <div class="juice-item"><span class="juice-name">Melon</span><span class="juice-prices">Small: $4 | Medium: $5 | Large: $6</span></div>
+        <div class="juice-item"><span class="juice-name">Pineapple</span><span class="juice-prices">Small: $4 | Medium: $5 | Large: $6</span></div>
+        <div class="juice-item"><span class="juice-name">Pomegranate</span><span class="juice-prices">Small: $4 | Medium: $5 | Large: $6</span></div>
+    </div>
+
+    <div class="image-container right-images">
+        <img src="https://lebanoninapicture.com/pages/nothing-beats-a-cool-and-refreshing-jallab-made-from-da/nothing-beats-a-cool-and-refreshing-jallab-made-6-15-2017-12-21-00-am-m.jpg" alt="Jallab Drink">
+        <img src="https://media01.stockfood.com/largepreviews/MzQyMDkzNjgw/11035280-Pouring-apple-juice-into-a-glass.jpg" alt="Apple Juice Pouring">
+    </div>
+
+    <a href="menu.html" class="back-button">Back to Menu</a>
+
+</body>
+</html>

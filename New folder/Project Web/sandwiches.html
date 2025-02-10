@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meals Menu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: #ffefd5;
+      font-family: "Dancing Script", serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      overflow: hidden;
+      position: relative;
+    }
+    .menu-container {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      overflow: hidden;
+      position: relative;
+    }
+    .menu {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      gap: 40px;
+      text-align: center;
+      width: 100vw;
+      height: 100vh;
+      position: relative;
+    }
+    .menu-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .menu-item img {
+      width: 220px;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+    .menu-item p {
+      margin-top: 10px;
+      font-size: 22px;
+      font-weight: bold;
+    }
+    .back-menu {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      padding: 10px 20px;
+      font-size: 18px;
+      background-color: #ff9800;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="menu-container">
+    <div class="menu" id="menu-page-1">
+      <div class="menu-item">
+        <img src="https://www.eatingwell.com/thmb/lWAiwknQ9yapq6UuXAYrUdrcKbk=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Rotisserie-Chicken-Sandwich-202-2000-485b673fe411460e95b512fbf805a5d9.jpg" alt="Rotisserie Chicken Sandwich">
+        <p>Rotisserie Chicken Sandwich - $6</p>
+      </div>
+      <div class="menu-item">
+        <img src="https://www.licious.in/blog/wp-content/uploads/2022/06/shutterstock_1339636625-1-600x600.jpg" alt="Shawarma">
+        <p>Shawarma - $4.5</p>
+      </div>
+      <div class="menu-item">
+        <img src="https://kfcprodimages-ehcsdud6a5a5eqcm.z01.azurefd.net/cmsimages/kfc/jor/imagestemp/100041.png" alt="Twister Sandwich">
+        <p>Twister Sandwich - $5.5</p>
+      </div>
+      <div class="menu-item">
+        <img src="https://www.hungryplanetfoods.com/wp-content/uploads/2020/12/boneless-pork-rib-sandwich-changed-background-1024x765.jpg" alt="Bbq RIB Sandwich">
+        <p>Bbq RIB Sandwich - $6.5</p>
+      </div>
+      <div class="menu-item">
+        <img src="https://farmrich.com/wp-content/uploads/2020/06/Boneless_Buffalo_Wing_Sandwich.jpg" alt="Buffalo Sandwich">
+        <p>Buffalo Sandwich - $6</p>
+      </div>
+      <div class="menu-item">
+        <img src="https://www.hawachickenlb.com/Library/Products/Images/resize/5c01dd3f-c4c7-4f3c-8c58-1e7e5c2d2f9d.jpg" alt="Crispy Sandwich">
+        <p>Crispy Sandwich - $6.5</p>
+      </div>
+    </div>
+  </div>
+  <button class="back-menu" onclick="window.location.href='menu.html'">Back to Menu</button>
+</body>
+</html>

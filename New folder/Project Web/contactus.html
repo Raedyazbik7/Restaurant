@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            display: flex;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .left-half {
+            width: 50%;
+            background: url('https://assets.clevelandclinic.org/transform/8c359282-71e7-4c84-8582-d0c2de9de128/typing-1265176826') no-repeat center;
+            background-size: cover;
+        }
+        .right-half {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+        }
+        .top-section, .bottom-section {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+        }
+        .top-section {
+            background-color: yellow;
+            text-align: center;
+            font-size: 1em;
+            flex-direction: column;
+        }
+        .top-section h2 {
+            margin-bottom: 10px;
+        }
+        .contact-box {
+            background-color: #4A235A;
+            padding: 10px;
+            margin: 5px;
+            border-radius: 5px;
+            color: white;
+            font-weight: bold;
+            transition: 0.3s;
+            font-size: 0.9em;
+        }
+        .contact-box:hover {
+            background-color: #6C3483;
+        }
+        .bottom-section {
+            background-color: blue;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            width: 90%;
+        }
+        .contact-form input, .contact-form textarea, .contact-form button {
+            margin: 5px 0;
+            padding: 8px;
+            border: none;
+            border-radius: 5px;
+            font-size: 0.9em;
+        }
+        .contact-form textarea {
+            resize: none;
+            height: 80px;
+        }
+        .contact-form button {
+            background-color: #4A235A;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .contact-form button:hover {
+            background-color: #6C3483;
+        }
+        .message-success {
+            display: none;
+            color: white;
+            font-size: 1em;
+            margin-top: 5px;
+        }
+    </style>
+    <script>
+        function sendMessage(event) {
+            event.preventDefault();
+            document.querySelector('.message-success').style.display = 'block';
+        }
+    </script>
+</head>
+<body>
+    <div class="left-half"></div>
+    <div class="right-half">
+        <div class="top-section">
+            <h2>Contact Us</h2>
+            <div>
+                <p class="contact-box"><a href="https://www.google.com/maps/search/?api=1&query=RGHC+4PR,+Beirut" style="color: white; text-decoration: none; display: block; padding: 10px; background-color: #4A235A; border-radius: 5px;">📍 <strong>Address:</strong> Hadath</a></p>
+                <p class="contact-box"><a href="tel:********" style="color: white; text-decoration: none; display: block; padding: 10px; background-color: #4A235A; border-radius: 5px;">☎ <strong>Phone:</strong> ********</a></p>
+                <p class="contact-box"><a href="mailto:Spicy@gmail.com" style="color: white; text-decoration: none; display: block; padding: 10px; background-color: #4A235A; border-radius: 5px;">✉ <strong>Email:</strong> Spicy@gmail.com</a></p>
+                <p class="contact-box">🌐 <strong>Website:</strong> <a href="project.html" style="color: white; text-decoration: none; display: block; padding: 10px;">www.Spicy.com</a></p>
+            </div>
+        </div>
+        <div class="bottom-section">
+            <form class="contact-form" onsubmit="sendMessage(event)">
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="Email" required>
+                <input type="text" placeholder="Phone Number" required>
+                <textarea placeholder="Write us a message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+            <p class="message-success">✔ Your message has been successfully delivered.</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pizza Menu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      background-color: #ffefd5;
+      font-family: "Dancing Script", serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      overflow: hidden;
+      position: relative;
+    }
+    .menu-container {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      overflow: hidden;
+      position: relative;
+    }
+    .menu {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      gap: 40px;
+      text-align: center;
+      width: 100vw;
+      height: 100vh;
+      position: absolute;
+    }
+    .menu-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .menu-item img {
+      width: 220px;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+    .menu-item p {
+      margin-top: 10px;
+      font-size: 22px;
+      font-weight: bold;
+    }
+    .back-menu {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      padding: 10px 20px;
+      font-size: 18px;
+      background-color: #ff9800;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="menu-container">
+    <div class="menu" id="menu-page-1">
+      <div class="menu-item">
+        <img src="https://homeslyce.com/wp-content/uploads/2024/09/traditional-italian-pizza-toppings.jpg" alt="Italian Pizza" />
+        <p>Italian Pizza - $18</p>
+      </div>
+      <div class="menu-item">
+        <img src="https://www.foodandwine.com/thmb/Wd4lBRZz3X_8qBr69UOu2m7I2iw=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/classic-cheese-pizza-FT-RECIPE0422-31a2c938fc2546c9a07b7011658cfd05.jpg" alt="Cheese Pizza" />
+        <p>Cheese Pizza - $15</p>
+      </div>
+      <div class="menu-item">
+        <img src="https://www.hormel.com/brands/hormel-pepperoni/wp-content/uploads/sites/3/Recipes_2400_Spicy-Pepperoni-Pizza.jpg?1737731159" alt="Pepperoni Pizza" />
+        <p>Pepperoni Pizza - $15</p>
+      </div>
+      <div class="menu-item">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/c/c8/Pizza_Margherita_stu_spivack.jpg" alt="Margherita Pizza" />
+        <p>Margherita Pizza - $14</p>
+      </div>
+      <div class="menu-item">
+        <img src="https://www.ezcater.com/wp-content/uploads/sites/2/2017/10/shutterstock_84904876.jpg" alt="Lebanese Pizza" />
+        <p>Lebanese Pizza - $12</p>
+      </div>
+    </div>
+  </div>
+  <button class="back-menu" onclick="window.location.href='menu.html'">Back to Menu</button>
+</body>
+</html>
+

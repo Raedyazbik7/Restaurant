@@ -1,0 +1,221 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meals Menu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,900;1,400;1,900&family=Roboto+Slab:wght@100;900&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      font-family: "Dancing Script", serif;
+      background: url("https://static.vecteezy.com/system/resources/previews/032/495/747/non_2x/black-wood-texture-background-vector.jpg") no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      position: relative;
+    }
+    .menu-container {
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+      position: relative;
+    }
+    .menu {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 40px;
+      text-align: center;
+      width: 100vw;
+      height: 100vh;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: transform 0.6s ease-in-out;
+      padding-top: 50px; 
+    }
+    .menu-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .menu-item img {
+      width: 220px;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+    .menu-item p {
+      margin-top: 10px;
+      font-size: 22px;
+      font-weight: bold;
+      color: #fff;
+      text-shadow: 1px 1px 2px #000;
+    }
+    .arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 30px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      color: #fff;
+      text-shadow: 1px 1px 2px #000;
+      z-index: 10;
+    }
+    .right-arrow {
+      right: 20px;
+    }
+    .left-arrow {
+      left: 20px;
+    }
+    .back-menu {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      padding: 10px 20px;
+      font-size: 18px;
+      background-color: #ff9800;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      z-index: 10;
+    }
+  </style>
+</head>
+<body>
+  <div class="menu-container">
+    <div class="menu" id="menu-page-1">
+      <div class="menu-item">
+        <img src="https://grantourismotravels.com/wp-content/uploads/2022/02/Chicken-Schnitzel-Burger-Recipe-with-Pickle-Mayo-Copyright-2022-Terence-Carter-Grantourismo-T.jpg" alt="Escalope Chicken Burger" />
+        <p>Escalope Chicken Burger - $5</p>
+      </div>
+      <div class="menu-item">
+        <img src="https://d31qjkbvvkyanm.cloudfront.net/images/recipe-images/angus-beef--bacon-chili-cheeseburger-detail-a18f903d.jpg" alt="Beef Bacon Burger" />
+        <p>Beef Bacon Burger - $7.5</p>
+      </div>
+      <div class="menu-item">
+        <img src="https://www.chicken.ca/wp-content/uploads/2017/09/Jalapeno-Popper-Chicken-Burgers-1.jpg" alt="Chicken Burger" />
+        <p>Chicken Burger - $6.5</p>
+      </div>
+      <div class="menu-item">
+        <img src="https://assets.epicurious.com/photos/5c745a108918ee7ab68daf79/master/pass/Smashburger-recipe-120219.jpg" alt="Cheese Burger" />
+        <p>Cheese Burger - $5.5</p>
+      </div>
+      <div class="menu-item">
+        <img src="https://www.sargento.com/assets/Uploads/Recipe/Image/CowboyChiliBurger.jpg" alt="Cowboy Chili Burger" />
+        <p>Cowboy Chili Burger - $7</p>
+      </div>
+    </div>
+
+    <div class="menu" id="menu-page-2" style="transform: translateX(100vw);">
+      <div class="menu-item">
+        <img src="https://www.chilipeppermadness.com/wp-content/uploads/2022/01/Boneless-Buffalo-Wings-SQ2.jpg" alt="Crispy Baked Buffalo Wings" />
+        <p>Crispy Baked Buffalo Wings (6 pcs) - $11</p>
+      </div>
+      <div class="menu-item">
+        <img src="https://www.jessicagavin.com/wp-content/uploads/2023/01/BBQ-chicken-wings-21.jpg" alt="Barbecue Wings" />
+        <p>Barbecue Wings (6 pcs) - $11</p>
+      </div>
+      <div class="menu-item">
+        <img src="https://www.allrecipes.com/thmb/8oXGLQlAit7oNhpHUvoSCH6jdYU=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/9072098-sweet-hot-mustard-chicken-wings-Chef-Mo-1x1-1-6f0c2cabeaf2423d844648839d41d33b.jpg" alt="Honey Mustard Wings" />
+        <p>Honey Mustard Wings (6 pcs) - $11</p>
+      </div>
+      <div class="menu-item">
+        <img src="https://www.allrecipes.com/thmb/XhyzIX9gH5RcXULKVsJI2e0Q7EY=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/88438RamonaCruz-Peters_TeriyakiChickenWings_4x3-88b0e560a1e34379a352bc885493b688.jpg" alt="Teriyaki Wings" />
+        <p>Teriyaki Wings (6 pcs) - $11</p>
+      </div>
+      <div class="menu-item">
+        <img src="https://d1uz88p17r663j.cloudfront.net/original/d923e677075cb57a388a44f199d105cf_Chicken_Wings_Maggi_purchased_shutterstock_1279872238Cropped.jpg" alt="Sweet and Chilli Wings" />
+        <p>Sweet and Chilli Wings (6 pcs) - $11</p>
+      </div>
+    </div>
+
+    <!-- Slide 3: Fries -->
+    <div class="menu" id="menu-page-3" style="transform: translateX(200vw);">
+      <div class="menu-item">
+        <img src="https://watchlearneat.com/wp-content/uploads/2022/03/Air-Fryer-Waffle-Fries-Final-ft2-e1648051479674.jpg" alt="Waffle Fries" />
+        <p>Waffle Fries - $3.5</p>
+      </div>
+      <div class="menu-item">
+        <img src="https://www.seriouseats.com/thmb/gA5l-kaEuKM27YQCBLzuoY0SdB4=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/20241016-SteakFrites-AmandaSuarez-step6-6e35c1088bdf408f8d838c541235fab2.jpg" alt="Steak Fries" />
+        <p>Steak Fries - $4</p>
+      </div>
+      <div class="menu-item">
+        <img src="https://www.recipetineats.com/tachyon/2022/09/Crispy-Fries_8.jpg" alt="French Fries" />
+        <p>French Fries - $3</p>
+      </div>
+      <div class="menu-item">
+        <img src="https://www.simplyairfryer.com/wp-content/uploads/2021/07/frozen-curly-fries-in-air-fryer.jpg" alt="Curly Fries" />
+        <p>Curly Fries - $4.5</p>
+      </div>
+      <div class="menu-item">
+        <img src="https://www.indianhealthyrecipes.com/wp-content/uploads/2020/10/potato-wedges-recipe.jpg" alt="Potato Wedges" />
+        <p>Potato Wedges - $3.5</p>
+      </div>
+    </div>
+  </div>
+
+  <button class="arrow left-arrow" id="left-arrow" onclick="prevPage()">⬅</button>
+  <button class="arrow right-arrow" id="right-arrow" onclick="nextPage()">➡</button>
+  
+  <button class="back-menu" onclick="window.location.href='menu.html'">Back to Menu</button>
+
+  <script>
+    
+    let currentPage = 1;
+    const slides = [
+      document.getElementById('menu-page-1'),
+      document.getElementById('menu-page-2'),
+      document.getElementById('menu-page-3')
+    ];
+
+    function updateSlides() {
+      slides.forEach((slide, index) => {
+        
+        slide.style.transform = 'translateX(' + ((index + 1 - currentPage) * 100) + 'vw)';
+      });
+      
+      if (currentPage === 1) {
+        document.getElementById('left-arrow').style.display = 'none';
+        document.getElementById('right-arrow').style.display = 'block';
+      } else if (currentPage === slides.length) {
+        document.getElementById('left-arrow').style.display = 'block';
+        document.getElementById('right-arrow').style.display = 'none';
+      } else {
+        document.getElementById('left-arrow').style.display = 'block';
+        document.getElementById('right-arrow').style.display = 'block';
+      }
+    }
+
+    function nextPage() {
+      if (currentPage < slides.length) {
+        currentPage++;
+        updateSlides();
+      }
+    }
+
+    function prevPage() {
+      if (currentPage > 1) {
+        currentPage--;
+        updateSlides();
+      }
+    }
+
+    updateSlides();
+  </script>
+</body>
+</html>
+
+
+

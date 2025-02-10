@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurant Reservation</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      background-image: url('https://cdn.vox-cdn.com/thumbor/tKTf4Q9FOWqo0jnhWa-ao3L54SI=/1400x788/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/19704647/hostess_on_phone.jpg');
+      background-size: cover;
+      background-position: center;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .reservation-container {
+      background: rgba(255, 255, 255, 0.8);
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+    input, select, button {
+      margin: 10px 0;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+    .animated-button {
+      background-color: #ff5733;
+      color: white;
+      cursor: pointer;
+    }
+    .animated-button:hover {
+      background-color: #e04e2a;
+      transform: scale(1.05);
+    }
+    #message {
+      margin-top: 15px;
+      font-size: 18px;
+      font-weight: bold;
+      display: none;
+      padding: 10px;
+      border-radius: 5px;
+    }
+    .success {
+      color: green;
+      background: rgba(144, 238, 144, 0.7);
+    }
+    .error {
+      color: red;
+      background: rgba(255, 182, 193, 0.7);
+    }
+    .back-home {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 20px;
+      background: #ffcc00;
+      color: black;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+    .back-home:hover {
+      background: #e6b800;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <div class="reservation-container">
+    <h2>Reserve Your Table</h2>
+    <form id="reservation-form">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" minlength="8" maxlength="15" placeholder="8-15 characters" required>
+      
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone" pattern="[0-9]{2}/[0-9]{3}/[0-9]{3}" placeholder="--/---/---" required>
+      
+      <label for="date">Date</label>
+      <input type="date" id="date" name="date" required>
+      
+      <label for="time">Time</label>
+      <select id="time" name="time" required>
+        <option value="14:00">2:00 PM</option>
+        <option value="15:00">3:00 PM</option>
+        <option value="16:00">4:00 PM</option>
+        <option value="17:00">5:00 PM</option>
+        <option value="18:00">6:00 PM</option>
+        <option value="19:00">7:00 PM</option>
+        <option value="20:00">8:00 PM</option>
+        <option value="21:00">9:00 PM</option>
+        <option value="22:00">10:00 PM</option>
+        <option value="23:00">11:00 PM</option>
+      </select>
+      
+      <label for="guests">Number of Guests</label>
+      <select id="guests" name="guests" required>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+      </select>
+      
+      <button type="submit" class="animated-button">Reserve Now</button>
+    </form>
+    <p id="message"></p>
+    
+    <a href="project.html" class="back-home">Back to Home Page</a>
+  </div>
+
+  <script>
+    document.getElementById("reservation-form").addEventListener("submit", function(event) {
+      event.preventDefault();
+      let time = document.getElementById("time").value;
+      let message = document.getElementById("message");
+      if (time >= "22:00") {
+        message.textContent = "❌ It's not possible, seat reserved already.";
+        message.className = "error";
+      } else {
+        message.textContent = "✅ Reservation succeeded!";
+        message.className = "success";
+      }
+      message.style.display = "block";
+    });
+  </script>
+</body>
+</html>
+
+
+

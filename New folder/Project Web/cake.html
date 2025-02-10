@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pancake Menu</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #ffefd5;
+            font-family: "Dancing Script", serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+            position: relative;
+        }
+        .menu-container {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            overflow: hidden;
+            position: relative;
+        }
+        .menu {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            gap: 40px;
+            text-align: center;
+            width: 100vw;
+            height: 100vh;
+            position: absolute;
+            transition: transform 0.6s ease-in-out;
+        }
+        .menu-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .menu-item img {
+            width: 220px;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .menu-item p {
+            margin-top: 10px;
+            font-size: 22px;
+            font-weight: bold;
+        }
+        .back-menu {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #ff9800;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .arrow {
+            position: absolute;
+            top: 50%;
+            font-size: 30px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            color: #333;
+        }
+        .right-arrow {
+            right: 20px;
+        }
+        .left-arrow {
+            left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="menu-container">
+        <div class="menu" id="menu-page-1">
+            <div class="menu-item item-1">
+                <img src="https://prettysimplesweet.com/wp-content/uploads/2019/09/Chocolate-Pancakes-Recipe-500x375.jpg" alt="Chocolate Pancake">
+                <p>Chocolate Pancake - $7</p>
+            </div>
+            <div class="menu-item item-2">
+                <img src="https://i0.wp.com/www.whisktogether.com/wp-content/uploads/2015/01/Rocky-Road-Pancakes-on-Whisk-Together.jpg?resize=800%2C840&ssl=1" alt="Marshmallow Pancake">
+                <p>Marshmallow Pancake - $8</p>
+            </div>
+            <div class="menu-item item-3">
+                <img src="https://www.frije.com/content/recipes/21215/800-1.jpg" alt="Canadian Pancake">
+                <p>Canadian Pancake - $6.5</p>
+            </div>
+            <div class="menu-item item-4">
+                <img src="https://2sistersrecipes.com/wp-content/uploads/2019/06/DSC_0471.jpg" alt="Strawberry & Banana Stick">
+                <p>Strawberry & Banana Stick - $6</p>
+            </div>
+            <div class="menu-item item-5">
+                <img src="https://www.shop.tastybees.com/wp-content/uploads/2020/04/Kinder-2-min.jpg" alt="Kinder Pancake">
+                <p>Kinder Pancake - $9</p>
+            </div>
+            <div class="menu-item item-6">
+                <img src="https://brokenovenbaking.com/wp-content/uploads/2023/01/cinnamon-honey-pancakes-8.jpg" alt="Honey Bees Pancake">
+                <p>Honey Bees Pancake - $7</p>
+            </div>
+        </div>
+        <div class="menu" id="menu-page-2" style="transform: translateX(100vw);">
+            <div class="menu-item">
+                <img src="https://kitchencents.com/wp-content/uploads/2020/01/Eclair-Puffs-Kitchen-Cents-9.jpg" alt="Mini Eclair">
+                <p>Mini Eclair - $4</p>
+            </div>
+            <div class="menu-item">
+                <img src="https://www.shop.tastybees.com/wp-content/uploads/2020/06/eclair.jpg" alt="Eclair Stick">
+                <p>Eclair Stick - $5</p>
+            </div>
+            <div class="menu-item">
+                <img src="https://images.getrecipekit.com/20230111193525-img_0001-20-20edited.jpeg?aspect_ratio=1:1&quality=90&" alt="Ferrero Rocher Pancake">
+                <p>Ferrero Rocher Pancake - $7.5</p>
+            </div>
+            <div class="menu-item">
+                <img src="https://whatmollymade.com/wp-content/uploads/2023/11/pancake-roll-ups-15.jpg" alt="Pancake Roll">
+                <p>Pancake Roll - $5.5</p>
+            </div>
+        </div>
+    </div>
+    <button class="arrow right-arrow" onclick="nextPage()">➡</button>
+    <button class="arrow left-arrow" id="back-arrow" onclick="prevPage()" style="display: none;">⬅</button>
+    <button class="back-menu" onclick="window.location.href='menu.html'">Back to Menu</button>
+    <script>
+        function nextPage() {
+            document.getElementById('menu-page-1').style.transform = 'translateX(-100vw)';
+            document.getElementById('menu-page-2').style.transform = 'translateX(0)';
+            document.getElementById('back-arrow').style.display = 'block';
+            document.querySelector('.right-arrow').style.display = 'none';
+        }
+        function prevPage() {
+            document.getElementById('menu-page-2').style.transform = 'translateX(100vw)';
+            document.getElementById('menu-page-1').style.transform = 'translateX(0)';
+            document.getElementById('back-arrow').style.display = 'none';
+            document.querySelector('.right-arrow').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
+
+
+
